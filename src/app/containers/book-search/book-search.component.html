@@ -1,0 +1,26 @@
+<div class="row gy-5 mt-2">
+  <div class="col-md text-center">
+    <h1>Book Search</h1>
+    <form [formGroup]="form" (ngSubmit)="searchBooks()">
+      <mdb-form-control>
+        <input mdbInput
+               formControlName="title"
+               type="text"
+               id="searchInput"
+               class="form-control" />
+      </mdb-form-control>
+      <button class="btn btn-primary cursor-pointer mt-2"
+              type="submit"
+              [disabled]="form.invalid">
+        Search
+      </button>
+    </form>
+    <div *ngIf="(books$ | async) as books">
+      <h6>
+        <span class="badge badge-primary mt-2">{{ books.length }} found</span>
+      </h6>
+      <app-search-results [columns]="columns"
+                          [data]="books"></app-search-results>
+    </div>
+  </div>
+</div>

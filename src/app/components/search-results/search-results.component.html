@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th *ngFor="let column of columns" scope="col">{{ column }}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of data; let i = index; trackBy: trackByCoverId">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ row.title }}</td>
+    <td>
+      <img src="https://covers.openlibrary.org/b/id/{{ row.cover_i }}-S.jpg" [alt]="row.title">
+    </td>
+    <td>{{ row.author_name | arrayDisplay }}</td>
+    <td>{{ row.publish_year | arrayDisplay }}</td>
+  </tr>
+  </tbody>
+</table>
