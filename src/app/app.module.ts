@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { MdbFormsModule } from "mdb-angular-ui-kit/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { BooksListComponent } from './components/books-list/books-list.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { BookSearchComponent } from "./containers/book-search/book-search.component";
@@ -17,7 +16,6 @@ import { ArrayDisplayPipe } from './pipes/array-display.pipe';
     AppComponent,
     NavigationComponent,
     BookSearchComponent,
-    BooksListComponent,
     SearchResultsComponent,
     ArrayDisplayPipe,
   ],
